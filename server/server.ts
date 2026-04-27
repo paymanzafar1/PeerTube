@@ -132,6 +132,7 @@ import { YoutubeDlUpdateScheduler } from './core/lib/schedulers/youtube-dl-updat
 import { VideosRedundancyScheduler } from './core/lib/schedulers/videos-redundancy-scheduler.js'
 import { RemoveOldHistoryScheduler } from './core/lib/schedulers/remove-old-history-scheduler.js'
 import { AutoFollowIndexInstances } from './core/lib/schedulers/auto-follow-index-instances.js'
+import { BlocklistSubscriptionsScheduler } from './core/lib/schedulers/blocklist-subscriptions-scheduler.js'
 import { RemoveDanglingResumableUploadsScheduler } from './core/lib/schedulers/remove-dangling-resumable-uploads-scheduler.js'
 import { VideoStatsBufferScheduler } from './core/lib/schedulers/video-stats-buffer-scheduler.js'
 import { GeoIPUpdateScheduler } from './core/lib/schedulers/geo-ip-update-scheduler.js'
@@ -322,6 +323,7 @@ async function startApplication () {
   PluginsCheckScheduler.Instance.enable()
   PeerTubeVersionCheckScheduler.Instance.enable()
   AutoFollowIndexInstances.Instance.enable()
+  BlocklistSubscriptionsScheduler.Instance.enable()
   RemoveDanglingResumableUploadsScheduler.Instance.enable()
   VideoChannelSyncLatestScheduler.Instance.enable()
   VideoStatsBufferScheduler.Instance.enable()
