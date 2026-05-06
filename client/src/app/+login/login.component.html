@@ -9,20 +9,20 @@
 
   @if (!externalAuthError && !isAuthenticatedWithExternalAuth) {
     <my-alert type="primary">
-      <h5 class="alert-heading">
+      <!-- <h5 class="alert-heading">
         @if (canUploadByDefault()) {
           <ng-container i18n>Logging into an account lets you publish content</ng-container>
         } @else {
           <ng-container i18n>Logging into an account lets you subscribe to your favorite content</ng-container>
         }
-      </h5>
+      </h5> -->
 
       @if (signupAllowed) {
-        <p i18n>
-          {{ instanceName }} allows registration.</p>
+        <p i18n="@@adaMessage2">
+          This site allows registration.</p>
       } @else {
-        <p i18n>
-          {{ instanceName }} doesn't allow for user registration.
+        <p i18n="@@adaMessage3">
+          This site doesn't allow for user registration.
         </p>
       }
     </my-alert>
