@@ -16,6 +16,14 @@
         <source>This site doesn't allow for user registration. </source>
         <target state="translated"> امکان ثبت‌نام کاربران در این سایت وجود ندارد.</target>
       </trans-unit>
+      <trans-unit id="adaMessage4" datatype="html">
+        <source>Training Courses</source>
+        <target state="translated">دوره‌های آموزشی</target>
+      </trans-unit>
+      <trans-unit id="adaMessage5" datatype="html">
+        <source>Iran Scratch Academy</source>
+        <target state="translated">آکادمی ایران اسکرچ</target>
+      </trans-unit>
 
 
       <trans-unit id="ngb.alert.close" datatype="html">

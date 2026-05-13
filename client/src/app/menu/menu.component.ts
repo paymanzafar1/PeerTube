@@ -107,13 +107,32 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
 
-    for (const section of [ this.buildQuickLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
+    for (const section of [ this.buildQuickLinks(), this.buildTrainLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
       if (section.links.length !== 0) {
         this.menuSections.push(section)
       }
     }
 
     this.menuSections = await this.hooks.wrapObject(this.menuSections, 'common', 'filter:left-menu.links.create.result')
+  }
+
+private buildTrainLinks (): MenuSection {
+    const base: MenuSection = {
+      key: 'train-access',
+      title: $localize`:@@adaMessage4:Training Courses`,
+      links: [
+      ]
+    }
+
+    if (this.loggedIn) {
+      base.links.push({
+        path: 'c/iranscratch1/videos',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage5:Iran Scratch Academy`
+      })
+    }
+
+    return base
   }
 
   private buildQuickLinks (): MenuSection {
