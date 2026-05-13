@@ -1,6 +1,6 @@
 <ng-template #moreInfoButton>
   <div class="more-info-btn-container">
-    <a *ngIf="loggedIn"
+    <a 
       class="more-info-btn peertube-button-link peertube-button-icon mt-2 d-block ellipsis" [ngClass]="{ 'icon-only': collapsed, 'label-xl': moreInfoLabel.length > 10 }"
       routerLink="/about" i18n-title title="More info" routerLinkActive="active"
       >
