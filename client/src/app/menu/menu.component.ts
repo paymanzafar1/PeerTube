@@ -124,13 +124,13 @@ private buildTrainLinks (): MenuSection {
       ]
     }
 
-    if (this.loggedIn) {
+    //if (this.loggedIn) {
       base.links.push({
         path: 'c/iranscratch1/videos',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage5:Iran Scratch Academy`
       })
-    }
+    //}
 
     return base
   }
