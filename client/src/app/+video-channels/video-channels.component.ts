@@ -127,8 +127,7 @@ export class VideoChannelsComponent implements OnInit, OnDestroy {
     if (this.isUserLoggedIn()) this.hotkeysService.add(this.hotkeys)
 
     this.links = [
-      { label: $localize`Videos`, routerLink: 'videos' },
-      { label: $localize`Playlists`, routerLink: 'video-playlists' }
+      { label: $localize`:@@adaMessage6:Training courses`, routerLink: 'video-playlists' }
     ]
   }
 
