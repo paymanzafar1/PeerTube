@@ -52,17 +52,5 @@ export class AboutInstanceComponent implements OnInit {
       })
     }
 
-    if (aboutHTML.moderationInformation || aboutHTML.codeOfConduct) {
-      this.menuEntries.push({
-        label: $localize`Moderation and code of conduct`,
-        routerLink: '/about/instance/moderation'
-      })
-    }
-
-    // Always displayed, we have the "features found on this instance" table on this page
-    this.menuEntries.push({
-      label: $localize`Technical information`,
-      routerLink: '/about/instance/tech'
-    })
   }
 }

@@ -41,16 +41,6 @@ export class AboutComponent implements OnInit {
         label: $localize`Platform`,
         routerLink: '/about/instance',
         pluginSelectorId: 'about-menu-instance'
-      },
-      {
-        label: $localize`PeerTube`,
-        routerLink: '/about/peertube',
-        pluginSelectorId: 'about-menu-peertube'
-      },
-      {
-        label: $localize`Network`,
-        routerLink: '/about/follows',
-        pluginSelectorId: 'about-menu-network'
       }
     ]
   }

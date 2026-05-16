@@ -11,14 +11,14 @@
     }
   </div>
 
-  @if (displayFilters()) {
+  <!-- @if (displayFilters()) {
     <my-video-filters-header
       class="d-block"
       [displayModerationBlock]="displayModerationBlock"
       [hideScope]="hideScopeFilter()"
       [filters]="filters"
     ></my-video-filters-header>
-  }
+} -->
 
   @if (hasDoneFirstQuery && videos.length === 0 && highlightedLives.length === 0) {
     <div class="no-results" i18n>No results.</div>
