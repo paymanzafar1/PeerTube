@@ -27,41 +27,7 @@ export class MyAccountComponent implements OnInit {
         label: $localize`Settings`,
         routerLink: '/my-account/settings'
       },
-
-      {
-        label: $localize`Notifications`,
-        routerLink: '/my-account/notifications'
-      },
-
-      {
-        label: $localize`Import/Export`,
-        routerLink: '/my-account/import-export'
-      },
-
-      {
-        label: $localize`Applications`,
-        routerLink: '/my-account/applications'
-      },
-
-      {
-        label: $localize`Moderation`,
-        routerLink: '/my-account/blocklist/accounts',
-        children: [
-          {
-            label: $localize`Muted accounts`,
-            routerLink: '/my-account/blocklist/accounts'
-          },
-          {
-            label: $localize`Muted servers`,
-            routerLink: '/my-account/blocklist/servers'
-          },
-          {
-            label: $localize`Abuse reports`,
-            routerLink: '/my-account/abuses'
-          }
-        ]
-      },
-
+  
       ...Object.values(clientRoutes)
         .map(clientRoute => ({
           label: clientRoute.menuItem?.label,

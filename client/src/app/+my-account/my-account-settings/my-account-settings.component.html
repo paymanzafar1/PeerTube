@@ -43,16 +43,16 @@
   </div>
 </div>
 
-<div class="pt-two-cols mt-5"> <!-- notifications grid -->
+<!-- <div class="pt-two-cols mt-5"> <!-- notifications grid 
   <div class="title-col">
-    <div class="anchor" id="notifications"></div> <!-- notifications anchor -->
+    <div class="anchor" id="notifications"></div> <!-- notifications anchor 
     <h2 i18n>NOTIFICATIONS</h2>
   </div>
 
   <div class="content-col">
     <my-account-notification-preferences [user]="user"></my-account-notification-preferences>
   </div>
-</div>
+</div> -->
 
 @if (user.pluginAuth === null) {
   <div class="pt-two-cols mt-5"> <!-- password grid -->
@@ -65,8 +65,8 @@
   </div>
 }
 
-@if (user.pluginAuth === null) {
-  <div class="pt-two-cols mt-5"> <!-- two factor auth grid -->
+<!-- @if (user.pluginAuth === null) {
+  <div class="pt-two-cols mt-5"> <!-- two factor auth grid 
     <div class="title-col">
       <h2 i18n>TWO-FACTOR AUTHENTICATION</h2>
     </div>
@@ -74,7 +74,7 @@
       <my-account-two-factor-button [user]="user"></my-account-two-factor-button>
     </div>
   </div>
-}
+} -->
 
 <div class="pt-two-cols mt-5">
   <div class="title-col">
