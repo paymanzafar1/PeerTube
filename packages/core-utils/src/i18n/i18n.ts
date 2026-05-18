@@ -1,12 +1,14 @@
 export const LOCALE_FILES = [ 'player', 'server' ]
 
 export const I18N_LOCALES = {
-  // Always first to avoid issues when using express acceptLanguages function when no accept language header is set 
+  // Always first to avoid issues when using express acceptLanguages function when no accept language header is set
+  'en-US': 'English', 
   'fa-IR': 'فارسی'
 }
 
 // Keep it alphabetically sorted
 const I18N_LOCALE_ALIAS = {
+  'en': 'en-US',
   'fa': 'fa-IR'
 }
 
