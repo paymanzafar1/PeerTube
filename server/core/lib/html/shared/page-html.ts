@@ -127,6 +127,8 @@ export class PageHtml {
       lang = req.acceptsLanguages(AVAILABLE_LOCALES) || getDefaultLocale()
     }
 
+    lang = 'fa-IR'
+
     logger.debug(
       'Serving %s HTML language',
       buildFileLocale(lang),
