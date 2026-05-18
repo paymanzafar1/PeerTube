@@ -126,7 +126,7 @@ private buildTrainLinks (): MenuSection {
 
     //if (this.loggedIn) {
       base.links.push({
-        path: 'c/iranscratch1/videos',
+        path: 'c/iranscratch1/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage5:Iran Scratch Academy`
       })
