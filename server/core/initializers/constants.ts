@@ -584,24 +584,7 @@ export const FFMPEG_NICE = {
 }
 
 export const VIDEO_CATEGORIES = {
-  1: 'Music',
-  2: 'Films',
-  3: 'Vehicles',
-  4: 'Art',
-  5: 'Sports',
-  6: 'Travels',
-  7: 'Gaming',
-  8: 'People',
-  9: 'Comedy',
-  10: 'Entertainment',
-  11: 'News & Politics',
-  12: 'How To',
-  13: 'Education',
-  14: 'Activism',
-  15: 'Science & Technology',
-  16: 'Animals',
-  17: 'Kids',
-  18: 'Food'
+  1: 'Training course'
 }
 
 // See https://creativecommons.org/licenses/?lang=en
