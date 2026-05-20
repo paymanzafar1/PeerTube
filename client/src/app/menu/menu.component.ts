@@ -107,7 +107,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
 
-    for (const section of [ this.buildQuickLinks(), this.buildTrainLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
+    for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
       if (section.links.length !== 0) {
         this.menuSections.push(section)
       }
@@ -116,24 +116,38 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.menuSections = await this.hooks.wrapObject(this.menuSections, 'common', 'filter:left-menu.links.create.result')
   }
 
-private buildTrainLinks (): MenuSection {
+private buildIranScratchLinks (): MenuSection {
     const base: MenuSection = {
-      key: 'train-access',
-      title: $localize`:@@adaMessage4:Training Courses`,
+      key: 'iranscratch-access',
+      title: $localize`:@@adaMessage4:Iran Scratch Academy`,
       links: [
       ]
     }
+
+    base.links.push({
+        path: 'c/iranscratch2/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage7:Scratch Junior`
+      })
+
+      base.links.push({
+        path: 'c/iranscratch3/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage8:Scratch for children`
+      })
+
 
     //if (this.loggedIn) {
       base.links.push({
         path: 'c/iranscratch1/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
-        label: $localize`:@@adaMessage5:Iran Scratch Academy`
+        label: $localize`:@@adaMessage5:Scratch for teenagers`
       })
     //}
 
     return base
-  }
+}
+
 
   private buildQuickLinks (): MenuSection {
     const base: MenuSection = {

@@ -28436,7 +28436,7 @@
         </context-group>
       </trans-unit>
 	  
-	  <trans-unit id="adaMessage1" datatype="html">
+	    <trans-unit id="adaMessage1" datatype="html">
         <source>AsreDanesh Afzar</source>
         <target state="translated">شرکت عصردانش‌افزار © ۱۴۰۵</target>
         <context-group purpose="location"><context context-type="sourcefile">src/app/menu/menu.component.html</context><context context-type="linenumber">202</context></context-group>
@@ -28450,17 +28450,26 @@
         <target state="translated"> امکان ثبت‌نام کاربران در این سایت وجود ندارد.</target>
       </trans-unit>
       <trans-unit id="adaMessage4" datatype="html">
-        <source>Training Courses</source>
-        <target state="translated">دوره‌های آموزشی</target>
-      </trans-unit>
-      <trans-unit id="adaMessage5" datatype="html">
         <source>Iran Scratch Academy</source>
         <target state="translated">آکادمی ایران اسکرچ</target>
+      </trans-unit>
+      <trans-unit id="adaMessage5" datatype="html">
+        <source>Scratch for teenagers</source>
+        <target state="translated">دوره اسکرچ نوجوانان</target>
       </trans-unit>
       <trans-unit id="adaMessage6" datatype="html">
         <source>Training courses</source>
         <target state="translated">دوره‌های آموزشی</target>
       </trans-unit>
+       <trans-unit id="adaMessage7" datatype="html">
+       <source>Scratch Junior</source>
+       <target state="translated">دوره اسکرچ جونیور</target>
+       </trans-unit>
+       <trans-unit id="adaMessage8" datatype="html">
+       <source>Scratch for children</source>
+       <target state="translated">دوره اسکرچ کودکان</target>
+       </trans-unit>
+
 
 	  
     </body>
