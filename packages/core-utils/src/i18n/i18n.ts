@@ -15,7 +15,7 @@ const I18N_LOCALE_ALIAS = {
 export const AVAILABLE_LOCALES = Object.keys(I18N_LOCALES).concat(Object.keys(I18N_LOCALE_ALIAS))
 
 export function getDefaultLocale () {
-  return 'fa-IR'
+  return 'en-US'
 }
 
 export function isDefaultLocale (locale: string) {
