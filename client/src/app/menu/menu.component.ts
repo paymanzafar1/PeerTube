@@ -124,12 +124,6 @@ private buildIranScratchLinks (): MenuSection {
       ]
     }
 
-    base.links.push({
-        path: 'c/iranscratch2/video-playlists',
-        icon: 'subscriptions' as GlobalIconName,
-        label: $localize`:@@adaMessage7:Scratch Junior`
-      })
-
       base.links.push({
         path: 'c/iranscratch3/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
