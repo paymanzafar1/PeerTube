@@ -28469,8 +28469,19 @@
        <source>Scratch for children</source>
        <target state="translated">دوره اسکرچ کودک</target>
        </trans-unit>
+       <trans-unit id="adaMessage9" datatype="html">
+       <source>Python programming</source>
+       <target state="translated">برنامه‌نویسی پایتون</target>
+       </trans-unit>
+       <trans-unit id="adaMessage10" datatype="html">
+       <source>GameMaker</source>
+       <target state="translated">دوره گیم میکر</target>
+       </trans-unit>
+       <trans-unit id="adaMessage11" datatype="html">
+       <source>MIT App Inventor</source>
+       <target state="translated">دوره اپ اینونتر</target>
+       </trans-unit>
 
-	  
     </body>
   </file>
 </xliff>
