@@ -28473,15 +28473,14 @@
        <source>Python programming</source>
        <target state="translated">برنامه‌نویسی پایتون</target>
        </trans-unit>
-       <trans-unit id="adaMessage10" datatype="html">
+      <trans-unit id="adaMessage10" datatype="html">
        <source>GameMaker</source>
-       <target state="translated">دوره گیم میکر</target>
+       <target state="translated">دوره GameMaker</target>
        </trans-unit>
        <trans-unit id="adaMessage11" datatype="html">
        <source>MIT App Inventor</source>
-       <target state="translated">دوره اپ اینونتر</target>
+       <target state="translated">دوره App Inventor</target>
        </trans-unit>
-
     </body>
   </file>
 </xliff>
