@@ -57,6 +57,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   menuSections: MenuSection[] = []
   loggedIn: boolean
+  limitedUser: boolean
   moreInfoLabel = $localize`More info`
 
   private user: AuthUser
@@ -107,11 +108,27 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
 
-      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
-      if (section.links.length !== 0) {
-        this.menuSections.push(section)
+    if (this.user.username == 'root' || this.user.username == 'ada') this.limitedUser = false
+    else this.limitedUser = true
+
+    if (!this.loggedIn)
+      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks() ]) {
+        if (section.links.length !== 0) {
+         this.menuSections.push(section)
+        }
       }
-    }
+    else if (this.limitedUser)
+      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks() ]) {
+        if (section.links.length !== 0) {
+         this.menuSections.push(section)
+        }
+      }
+    else 
+      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
+        if (section.links.length !== 0) {
+         this.menuSections.push(section)
+        }
+      }
 
     this.menuSections = await this.hooks.wrapObject(this.menuSections, 'common', 'filter:left-menu.links.create.result')
   }
