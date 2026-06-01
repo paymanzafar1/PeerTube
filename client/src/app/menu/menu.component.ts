@@ -110,7 +110,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
 
-    if (this.loggedIn && (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin')) this.adminUser = true
+    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
     else this.adminUser = false
 
     if (this.adminUser) {
@@ -119,7 +119,8 @@ export class MenuComponent implements OnInit, OnDestroy {
          this.menuSections.push(section)
         }
       }
-    } else {
+    } 
+    else {
       for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks() ]) {
         if (section.links.length !== 0) {
          this.menuSections.push(section)
