@@ -83,6 +83,10 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   ngOnInit () {
     this.loggedIn = this.authService.isLoggedIn()
+
+    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
+    else this.adminUser = false
+
     this.onUserStateChange()
 
     this.authSub = this.authService.loginChangedSource.subscribe(status => {
