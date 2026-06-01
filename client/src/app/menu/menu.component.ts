@@ -57,7 +57,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   menuSections: MenuSection[] = []
   loggedIn: boolean
-  limitedUser: boolean
+  adminUser: boolean
   moreInfoLabel = $localize`More info`
 
   private user: AuthUser
@@ -85,6 +85,9 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.loggedIn = this.authService.isLoggedIn()
     this.onUserStateChange()
 
+    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
+    else this.adminUser = false
+
     this.authSub = this.authService.loginChangedSource.subscribe(status => {
       if (status === AuthStatus.LoggedIn) this.loggedIn = true
       else if (status === AuthStatus.LoggedOut) this.loggedIn = false
@@ -108,27 +111,11 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
 
-    if (this.user.username == 'root' || this.user.username == 'ada') this.limitedUser = false
-    else this.limitedUser = true
-
-    if (!this.loggedIn)
-      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks() ]) {
+    for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
         if (section.links.length !== 0) {
          this.menuSections.push(section)
         }
-      }
-    else if (this.limitedUser)
-      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks() ]) {
-        if (section.links.length !== 0) {
-         this.menuSections.push(section)
-        }
-      }
-    else 
-      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
-        if (section.links.length !== 0) {
-         this.menuSections.push(section)
-        }
-      }
+    }
 
     this.menuSections = await this.hooks.wrapObject(this.menuSections, 'common', 'filter:left-menu.links.create.result')
   }
@@ -141,20 +128,17 @@ private buildIranScratchLinks (): MenuSection {
       ]
     }
 
-      base.links.push({
+        base.links.push({
         path: 'c/iranscratch3/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage8:Scratch for children`
-      })
+       })
 
-
-    //if (this.loggedIn) {
-      base.links.push({
+        base.links.push({
         path: 'c/iranscratch1/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage5:Scratch for teenagers`
-      })
-    //}
+        })
 
         base.links.push({
         path: 'c/iranscratch4/video-playlists',
@@ -173,7 +157,6 @@ private buildIranScratchLinks (): MenuSection {
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage11:MIT App Inventor`
         })
-
 
     return base
 }
@@ -207,7 +190,7 @@ private buildIranScratchLinks (): MenuSection {
   private buildLibraryLinks (): MenuSection {
     let links: MenuLink[] = []
 
-    if (this.loggedIn) {
+    if (this.loggedIn && this.adminUser) {
       links = links.concat([
         {
           path: '/my-library/video-playlists',
@@ -232,7 +215,7 @@ private buildIranScratchLinks (): MenuSection {
   private buildVideoMakerLinks (): MenuSection {
     let links: MenuLink[] = []
 
-    if (this.loggedIn && this.canSeeVideoMakerBlock) {
+    if (this.loggedIn && this.canSeeVideoMakerBlock && this.adminUser) {
       links = links.concat([
         {
           path: '/my-library/video-channels',
