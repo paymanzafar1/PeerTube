@@ -118,7 +118,6 @@ export class PageHtml {
     // Check param lang validity
     if (paramLang && is18nLocale(paramLang)) {
       lang = paramLang
-      lang = 'fa-IR'
 
       // Save locale in cookies
       setClientLanguageCookie(res, lang)
@@ -126,6 +125,7 @@ export class PageHtml {
       lang = req.cookies.clientLanguage
     } else {
       lang = req.acceptsLanguages(AVAILABLE_LOCALES) || getDefaultLocale()
+      lang = 'fa-IR'
     }
 
     logger.debug(
