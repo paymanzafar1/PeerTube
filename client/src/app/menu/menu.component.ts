@@ -85,9 +85,6 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.loggedIn = this.authService.isLoggedIn()
     this.onUserStateChange()
 
-    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
-    else this.adminUser = false
-
     this.authSub = this.authService.loginChangedSource.subscribe(status => {
       if (status === AuthStatus.LoggedIn) this.loggedIn = true
       else if (status === AuthStatus.LoggedOut) this.loggedIn = false
@@ -111,6 +108,9 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
 
+    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
+    else this.adminUser = false
+
     for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
         if (section.links.length !== 0) {
          this.menuSections.push(section)
@@ -124,8 +124,7 @@ private buildIranScratchLinks (): MenuSection {
     const base: MenuSection = {
       key: 'iranscratch-access',
       title: $localize`:@@adaMessage4:Iran Scratch Academy`,
-      links: [
-      ]
+      links: []
     }
 
         base.links.push({
