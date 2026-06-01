@@ -84,9 +84,6 @@ export class MenuComponent implements OnInit, OnDestroy {
   ngOnInit () {
     this.loggedIn = this.authService.isLoggedIn()
 
-    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
-    else this.adminUser = false
-
     this.onUserStateChange()
 
     this.authSub = this.authService.loginChangedSource.subscribe(status => {
@@ -111,9 +108,6 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   private async buildMenuSections () {
     this.menuSections = []
-
-    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
-    else this.adminUser = false
 
     for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
         if (section.links.length !== 0) {
@@ -310,6 +304,9 @@ private buildIranScratchLinks (): MenuSection {
     this.user = this.loggedIn
       ? this.authService.getUser()
       : undefined
+
+      if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
+      else this.adminUser = false
 
     this.computeCanSeeVideoMakerBlock()
       .subscribe(res => {
