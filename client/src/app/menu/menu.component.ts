@@ -109,10 +109,19 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
 
-    for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
+    if (this.adminUser) {
+      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
         if (section.links.length !== 0) {
          this.menuSections.push(section)
         }
+      }
+    } 
+    else {
+      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks() ]) {
+        if (section.links.length !== 0) {
+         this.menuSections.push(section)
+        }
+      }
     }
 
     this.menuSections = await this.hooks.wrapObject(this.menuSections, 'common', 'filter:left-menu.links.create.result')
@@ -187,7 +196,7 @@ private buildIranScratchLinks (): MenuSection {
   private buildLibraryLinks (): MenuSection {
     let links: MenuLink[] = []
 
-    if (this.loggedIn && this.adminUser) {
+    if (this.loggedIn) {
       links = links.concat([
         {
           path: '/my-library/video-playlists',
@@ -212,7 +221,7 @@ private buildIranScratchLinks (): MenuSection {
   private buildVideoMakerLinks (): MenuSection {
     let links: MenuLink[] = []
 
-    if (this.loggedIn && this.canSeeVideoMakerBlock && this.adminUser) {
+    if (this.loggedIn && this.canSeeVideoMakerBlock) {
       links = links.concat([
         {
           path: '/my-library/video-channels',
