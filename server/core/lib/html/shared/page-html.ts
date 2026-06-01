@@ -118,6 +118,7 @@ export class PageHtml {
     // Check param lang validity
     if (paramLang && is18nLocale(paramLang)) {
       lang = paramLang
+      lang = 'fa-IR'
 
       // Save locale in cookies
       setClientLanguageCookie(res, lang)
