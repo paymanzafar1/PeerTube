@@ -60,7 +60,8 @@ export class MenuComponent implements OnInit, OnDestroy {
   adminUser: boolean
   moreInfoLabel = $localize`More info`
 
-  user: AuthUser
+  private user: AuthUser
+  user1: AuthUser
   private canSeeVideoMakerBlock: boolean
 
   private authSub: Subscription
@@ -315,6 +316,10 @@ private buildIranScratchLinks (): MenuSection {
 
   private onUserStateChange () {
     this.user = this.loggedIn
+      ? this.authService.getUser()
+      : undefined
+
+    this.user1 = this.loggedIn
       ? this.authService.getUser()
       : undefined
 
