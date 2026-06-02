@@ -115,4 +115,6 @@
   <my-button theme="tertiary" rounded="true" class="menu-button margin-button" icon="menu" (click)="toggleMenu()"></my-button>
 </div>
 
+@if (user.username == 'root' || user.username == 'ada' || user.username == 'apiadmin') {
 <my-quick-settings #quickSettingsModal></my-quick-settings>
+}
