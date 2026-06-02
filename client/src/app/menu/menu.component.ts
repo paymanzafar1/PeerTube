@@ -187,7 +187,7 @@ private buildIranScratchLinks (): MenuSection {
       ]
     }
 
-    if (this.loggedIn) {
+    if (this.loggedIn && this.adminUser) {
       base.links.push({
         path: '/videos/subscriptions',
         icon: 'subscriptions' as GlobalIconName,
