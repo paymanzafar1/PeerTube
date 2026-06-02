@@ -1,5 +1,5 @@
 <h1 class="visually-hidden" i18n>Settings</h1>
-
+@if (user.username == 'root' || user.username == 'ada' || user.username == 'apiadmin') {
 <div class="pt-two-cols mt-3"> <!-- profile settings grid -->
   <div class="title-col">
     <h2 i18n>PROFILE SETTINGS</h2>
@@ -43,16 +43,16 @@
   </div>
 </div>
 
-<!-- <div class="pt-two-cols mt-5"> <!-- notifications grid 
+<div class="pt-two-cols mt-5"> <!-- notifications grid -->
   <div class="title-col">
-    <div class="anchor" id="notifications"></div> <!-- notifications anchor 
+    <div class="anchor" id="notifications"></div> <!-- notifications anchor -->
     <h2 i18n>NOTIFICATIONS</h2>
   </div>
 
   <div class="content-col">
     <my-account-notification-preferences [user]="user"></my-account-notification-preferences>
   </div>
-</div> -->
+</div> 
 
 @if (user.pluginAuth === null) {
   <div class="pt-two-cols mt-5"> <!-- password grid -->
@@ -65,8 +65,8 @@
   </div>
 }
 
-<!-- @if (user.pluginAuth === null) {
-  <div class="pt-two-cols mt-5"> <!-- two factor auth grid 
+@if (user.pluginAuth === null) {
+  <div class="pt-two-cols mt-5"> <!-- two factor auth grid -->
     <div class="title-col">
       <h2 i18n>TWO-FACTOR AUTHENTICATION</h2>
     </div>
@@ -74,7 +74,7 @@
       <my-account-two-factor-button [user]="user"></my-account-two-factor-button>
     </div>
   </div>
-} -->
+} 
 
 <div class="pt-two-cols mt-5">
   <div class="title-col">
@@ -88,7 +88,7 @@
   </div>
 </div>
 
-<!-- <div class="pt-two-cols mt-5"> <!-- email grid 
+<div class="pt-two-cols mt-5"> <!-- email grid -->
   <div class="title-col">
     <h2 i18n>EMAIL</h2>
   </div>
@@ -100,9 +100,9 @@
       <my-account-change-email></my-account-change-email>
     }
   </div> 
-</div> -->
+</div>
 
-@if (user.username == 'root' || user.username == 'ada' || user.username == 'apiadmin') {
+
 <div class="pt-two-cols mt-5"> <!-- danger zone grid -->
   <div class="title-col">
     <h2 i18n class="pt-title-danger">DANGER ZONE</h2>
