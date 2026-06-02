@@ -25,10 +25,10 @@
   <div class="d-flex align-items-center buttons-container" [hidden]="!isLoaded()">
     @if (!loggedIn) {
     
-      <my-button
+      <!-- <my-button
         i18n-title title="Open settings modal"
         theme="tertiary" rounded="true" class="margin-button settings-button" icon="cog" (click)="openQuickSettings()"
-      ></my-button>
+      ></my-button> -->
       
 
       @if (isRegistrationAllowed()) {
@@ -87,7 +87,6 @@
           }
 
           <div class="dropdown-divider"></div>
-        }
 
           <a
             myPluginSelector pluginSelectorId="menu-user-dropdown-language-item"
@@ -97,6 +96,7 @@
             <span i18n>Interface:</span>
             <span class="ms-auto ps-2 muted">{{ currentInterfaceLanguage }}</span>
           </a>
+        }
 
           @if (!isInMobileView) {
             <button ngbDropdownItem class="dropdown-item" (click)="openHotkeysCheatSheet()">
