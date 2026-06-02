@@ -24,12 +24,12 @@
 
   <div class="d-flex align-items-center buttons-container" [hidden]="!isLoaded()">
     @if (!loggedIn) {
-      @if (user.username == 'root' || user.username == 'ada' || user.username == 'apiadmin') {
+    
       <my-button
         i18n-title title="Open settings modal"
         theme="tertiary" rounded="true" class="margin-button settings-button" icon="cog" (click)="openQuickSettings()"
       ></my-button>
-      }
+      
 
       @if (isRegistrationAllowed()) {
         <a routerLink="/signup" class="peertube-button-link secondary-button w-100 ellipsis margin-button create-account-button">
