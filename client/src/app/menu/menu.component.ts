@@ -60,7 +60,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   adminUser: boolean
   moreInfoLabel = $localize`More info`
 
-  private user: AuthUser
+  user: AuthUser
   private canSeeVideoMakerBlock: boolean
 
   private authSub: Subscription
