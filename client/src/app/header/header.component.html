@@ -38,13 +38,18 @@
       <my-login-link class="login-label" className="peertube-button-link primary-button w-100 ellipsis"></my-login-link>
       <my-login-link class="login-icon" className="peertube-button-link primary-button icon-only w-100 ellipsis" icon="true" label=""></my-login-link>
     } @else {
+      
+      @if (user.username == 'root' || user.username == 'ada' || user.username == 'apiadmin') {
       <my-notification-dropdown class="margin-button"></my-notification-dropdown>
+      }
 
+      @if (user.username == 'root' || user.username == 'ada' || user.username == 'apiadmin') {
       <my-button
         i18n-title title="Go to the page where you can manage your account"
         theme="tertiary" rounded="true" class="margin-button settings-button" icon="cog" ptRouterLink="/my-account"
         inheritColor="true"
       ></my-button>
+      }
 
       <div
         class="logged-in-container" ngbDropdown #dropdown="ngbDropdown" placement="bottom-left auto"
