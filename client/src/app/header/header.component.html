@@ -61,6 +61,7 @@
         </button>
 
         <div ngbDropdownMenu>
+          @if (user.username == 'root' || user.username == 'ada' || user.username == 'apiadmin') {
           @if (user.account) {
             <a
               ngbDropdownItem class="dropdown-item" [routerLink]="[ '/a', user.account.nameWithHost ]"
@@ -79,6 +80,7 @@
           }
 
           <div class="dropdown-divider"></div>
+        }
 
           <a
             myPluginSelector pluginSelectorId="menu-user-dropdown-language-item"
