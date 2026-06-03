@@ -110,10 +110,6 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   private async buildMenuSections () {
     this.menuSections = []
-
-    if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
-    else this.adminUser = false
-
     
       for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
         if (section.links.length !== 0) {
@@ -180,7 +176,7 @@ private buildIranScratchLinks (): MenuSection {
       ]
     }
 
-    if (this.loggedIn && this.adminUser) {
+    if (this.loggedIn) {
       base.links.push({
         path: '/videos/subscriptions',
         icon: 'subscriptions' as GlobalIconName,
