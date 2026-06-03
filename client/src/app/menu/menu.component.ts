@@ -114,21 +114,14 @@ export class MenuComponent implements OnInit, OnDestroy {
     if (this.user.username == 'root' || this.user.username == 'ada' || this.user.username == 'apiadmin') this.adminUser = true
     else this.adminUser = false
 
-    if (this.adminUser) {
+    
       for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
         if (section.links.length !== 0) {
          this.menuSections.push(section)
         }
       }
-    } 
-    else {
-      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks() ]) {
-        if (section.links.length !== 0) {
-         this.menuSections.push(section)
-        }
-      }
-    }
-
+     
+    
     this.menuSections = await this.hooks.wrapObject(this.menuSections, 'common', 'filter:left-menu.links.create.result')
   }
 
