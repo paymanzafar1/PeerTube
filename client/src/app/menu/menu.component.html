@@ -1,9 +1,8 @@
 <ng-template #moreInfoButton>
   
   <div class="more-info-btn-container">
-    @if (user1.username == 'root' || user1.username == 'ada' || user1.username == 'apiadmin') {
-    <a
-      class="more-info-btn peertube-button-link peertube-button-icon mt-2 d-block ellipsis" [ngClass]="{ 'icon-only': collapsed, 'label-xl': moreInfoLabel.length > 10 }"
+    
+    <a *ngIf="loggedIn" class="more-info-btn peertube-button-link peertube-button-icon mt-2 d-block ellipsis" [ngClass]="{ 'icon-only': collapsed, 'label-xl': moreInfoLabel.length > 10 }"
       routerLink="/about" i18n-title title="More info" routerLinkActive="active"
       >
       <my-global-icon iconName="help"></my-global-icon>
@@ -12,7 +11,7 @@
         {{ moreInfoLabel }}
       }
     </a>
-    }
+    
   </div>
 
 </ng-template>
