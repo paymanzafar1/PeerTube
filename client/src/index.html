@@ -12,6 +12,28 @@
     <!-- base url -->
     <base href="/">
 
+    <script type='text/javascript'>
+    var Countly = Countly || {};
+    Countly.q = Countly.q || [];
+
+    // server credentials 
+    Countly.app_key = "b98f7e9a38a1de94d5782a3157c550713f5cc45c"; 
+    Countly.url = "https://analytics.asr24.com";
+
+    // Track sessions and page views automatically (recommended)
+    Countly.q.push(['track_sessions']);
+    Countly.q.push(['track_pageview']);
+
+    // Load Countly script asynchronously
+    (function() {
+      var cly = document.createElement('script'); cly.type = 'text/javascript';
+      cly.async = true;
+      cly.src = 'https://analytics.asr24.com/sdk/web/countly.min.js';
+      cly.onload = function(){Countly.init()};
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+    })();
+    </script>
+
     <!-- /!\ The following comment is used by the server to prerender some tags /!\ -->
 
     <!-- title tag -->
