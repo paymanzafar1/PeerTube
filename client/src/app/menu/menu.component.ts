@@ -131,13 +131,13 @@ private buildIranScratchLinks (): MenuSection {
         base.links.push({
         path: 'c/iranscratch3/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
-        label: $localize`:@@adaMessage8:Scratch for children`
+        label: $localize`:@@adaMessage8:Scratch for teenagers`
        })
 
         base.links.push({
         path: 'c/iranscratch1/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
-        label: $localize`:@@adaMessage5:Scratch for teenagers`
+        label: $localize`:@@adaMessage5:Advanced Scratch`
         })
 
         base.links.push({
