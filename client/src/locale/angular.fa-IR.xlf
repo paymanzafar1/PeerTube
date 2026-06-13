@@ -28481,6 +28481,14 @@
        <source>MIT App Inventor</source>
        <target state="translated">دوره App Inventor</target>
        </trans-unit>
+       <trans-unit id="adaMessage12" datatype="html">
+       <source>Applied AI</source>
+       <target state="translated">دوره کاربردی هوش مصنوعی</target>
+       </trans-unit>
+       <trans-unit id="adaMessage13" datatype="html">
+       <source>Godot advanced game development</source>
+       <target state="translated">بازی‌سازی پیشرفته با گودو</target>
+       </trans-unit>
 
 
     </body>

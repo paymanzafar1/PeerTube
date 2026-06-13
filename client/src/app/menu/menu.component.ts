@@ -129,21 +129,33 @@ private buildIranScratchLinks (): MenuSection {
     }
 
         base.links.push({
+        path: 'c/iranscratch2/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage7:Scratch Junior`
+      })
+
+      base.links.push({
         path: 'c/iranscratch3/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage8:Scratch for teenagers`
-       })
+      })
 
-        base.links.push({
+      base.links.push({
         path: 'c/iranscratch1/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage5:Advanced Scratch`
-        })
+      })
 
         base.links.push({
         path: 'c/iranscratch4/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage9:Python programming`
+        })
+
+        base.links.push({
+        path: 'c/iranscratch_ai/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage12:Applied AI`
         })
 
         base.links.push({
@@ -157,6 +169,13 @@ private buildIranScratchLinks (): MenuSection {
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage11:MIT App Inventor`
         })
+
+        base.links.push({
+        path: 'c/iranscratch_godot/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage13:Godot advanced game development`
+        })
+
 
     return base
 }
