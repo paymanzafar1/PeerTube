@@ -147,6 +147,12 @@ private buildIranScratchLinks (): MenuSection {
       })
 
         base.links.push({
+        path: 'c/iranscratch6/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage11:MIT App Inventor`
+        })
+
+        base.links.push({
         path: 'c/iranscratch4/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage9:Python programming`
@@ -162,12 +168,6 @@ private buildIranScratchLinks (): MenuSection {
         path: 'c/iranscratch5/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage10:GameMaker`
-        })
-
-        base.links.push({
-        path: 'c/iranscratch6/video-playlists',
-        icon: 'subscriptions' as GlobalIconName,
-        label: $localize`:@@adaMessage11:MIT App Inventor`
         })
 
         base.links.push({
