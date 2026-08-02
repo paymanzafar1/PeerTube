@@ -16,8 +16,8 @@
         <target state="translated"> امکان ثبت‌نام کاربران در این سایت وجود ندارد.</target>
       </trans-unit>
       <trans-unit id="adaMessage4" datatype="html">
-        <source>Iran Scratch Academy</source>
-        <target state="translated">آکادمی ایران اسکرچ</target>
+        <source>Iran Scratch</source>
+        <target state="translated">ایران اسکرچ</target>
       </trans-unit>
       <trans-unit id="adaMessage5" datatype="html">
         <source> Advanced Scratch</source>
@@ -55,7 +55,22 @@
        <source>Godot advanced game development</source>
        <target state="translated">بازی‌سازی پیشرفته با گودو</target>
        </trans-unit>
-
+       <trans-unit id="adaMessage14" datatype="html">
+       <source>Fanrad</source>
+       <target state="translated">فنراد</target>
+       </trans-unit>
+       <trans-unit id="adaMessage15" datatype="html">
+       <source>AI for Microsoft Excel</source>
+       <target state="translated">کاربرد هوش مصنوعی در اکسل</target>
+       </trans-unit>
+       <trans-unit id="adaMessage16" datatype="html">
+       <source>AI in Office Administration</source>
+       <target state="translated">هوش مصنوعی در امور اداری</target>
+       </trans-unit>
+       <trans-unit id="adaMessage17" datatype="html">
+       <source>Microsoft Excel Essentials</source>
+       <target state="translated">اکسل مقدماتی</target>
+       </trans-unit>
 	
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>

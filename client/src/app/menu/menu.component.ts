@@ -112,7 +112,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   private async buildMenuSections () {
     this.menuSections = []
     
-      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
+      for (const section of [ this.buildQuickLinks(), this.buildIranScratchLinks(), this.buildFanradLinks(), this.buildLibraryLinks(), this.buildVideoMakerLinks(), this.buildAdminLinks() ]) {
         if (section.links.length !== 0) {
          this.menuSections.push(section)
         }
@@ -125,7 +125,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 private buildIranScratchLinks (): MenuSection {
     const base: MenuSection = {
       key: 'iranscratch-access',
-      title: $localize`:@@adaMessage4:Iran Scratch Academy`,
+      title: $localize`:@@adaMessage4:Iran Scratch`,
       links: []
     }
 
@@ -176,10 +176,36 @@ private buildIranScratchLinks (): MenuSection {
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage13:Godot advanced game development`
         })
-
-
     return base
 }
+
+private buildFanradLinks (): MenuSection {
+    const base: MenuSection = {
+      key: 'fanrad-access',
+      title: $localize`:@@adaMessage14:Fanrad`,
+      links: [
+      ]
+    }    
+
+      base.links.push({
+        path: 'c/fanrad1/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage15:AI for Microsoft Excel`
+      })
+
+      base.links.push({
+        path: 'c/fanrad2/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage16:AI in Office Administration`
+      })
+
+      base.links.push({
+        path: 'c/fanrad3/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage17:Microsoft Excel Essentials`
+      })
+    return base
+  }
 
 
   private buildQuickLinks (): MenuSection {
