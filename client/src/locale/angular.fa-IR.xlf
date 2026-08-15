@@ -71,6 +71,10 @@
        <source>Microsoft Excel Essentials</source>
        <target state="translated">اکسل مقدماتی</target>
        </trans-unit>
+       <trans-unit id="adaMessage18" datatype="html">
+       <source>AI for parents</source>
+       <target state="translated">دوره هوش مصنوعی برای پدر و مادرها</target>
+       </trans-unit>
 	
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>

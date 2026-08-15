@@ -187,7 +187,13 @@ private buildFanradLinks (): MenuSection {
       ]
     }    
 
-      base.links.push({
+    base.links.push({
+        path: 'c/fanrad4/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage18:AI for parents`
+      })  
+    
+    base.links.push({
         path: 'c/fanrad1/video-playlists',
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage15:AI for Microsoft Excel`
