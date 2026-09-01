@@ -210,6 +210,13 @@ private buildFanradLinks (): MenuSection {
         icon: 'subscriptions' as GlobalIconName,
         label: $localize`:@@adaMessage17:Microsoft Excel Essentials`
       })
+
+      base.links.push({
+        path: 'c/fanrad5/video-playlists',
+        icon: 'subscriptions' as GlobalIconName,
+        label: $localize`:@@adaMessage19:ICDL Excel course`
+      })
+
     return base
   }
 

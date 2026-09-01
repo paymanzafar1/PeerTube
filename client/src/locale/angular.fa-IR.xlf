@@ -75,6 +75,10 @@
        <source>AI for parents</source>
        <target state="translated">دوره هوش مصنوعی برای پدر و مادرها</target>
        </trans-unit>
+       <trans-unit id="adaMessage19" datatype="html">
+       <source>ICDL Excel course</source>
+       <target state="translated">اکسل ICDL</target>
+       </trans-unit>
 	
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>
